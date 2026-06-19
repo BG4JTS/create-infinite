@@ -14,6 +14,6 @@ public class InfiniteMotorBlock extends CreativeMotorBlock {
 
     @Override
     public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return ModBlockEntities.INFINITE_MOTOR.create(pos, state);
+        return ModBlockEntities.INFINITE_MOTOR.get().create(pos, state);
     }
 }
