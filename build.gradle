@@ -31,6 +31,10 @@ repositories {
         name = "Create"
         url = "https://maven.createmod.net"
     }
+    maven {
+        name = "tterrag"
+        url = "https://maven.tterrag.com/"
+    }
     // Add here additional repositories if required by some of the dependencies below.
 }
 
@@ -183,6 +187,10 @@ publishing {
         name = "Create"
         url = "https://maven.createmod.net"
     }
+    maven {
+        name = "tterrag"
+        url = "https://maven.tterrag.com/"
+    }
         maven {
             url "file://${project.projectDir}/repo"
         }
@@ -200,4 +208,5 @@ idea {
         downloadJavadoc = true
     }
 }
+
 
