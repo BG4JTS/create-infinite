@@ -27,6 +27,11 @@ sourceSets.main.resources {
 }
 
 repositories {
+    // Local libs for dependencies that can't be fetched from remote mavens
+    flatDir {
+        dirs 'libs'
+    }
+repositories {
     maven {
         name = "Create"
         url = "https://maven.createmod.net"
@@ -208,6 +213,7 @@ idea {
         downloadJavadoc = true
     }
 }
+
 
 
 
