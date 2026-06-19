@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "create_infinite:block/infinite_motor"
+    "all": "create:block/creative_motor"
   }
 }
