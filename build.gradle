@@ -40,6 +40,10 @@ repositories {
         name = "tterrag"
         url = "https://maven.tterrag.com/"
     }
+    maven {
+        name = "IThundxr"
+        url = "https://maven.ithundxr.dev/snapshots"
+    }
     // Add here additional repositories if required by some of the dependencies below.
 }
 
@@ -188,14 +192,6 @@ publishing {
         }
     }
     repositories {
-    maven {
-        name = "Create"
-        url = "https://maven.createmod.net"
-    }
-    maven {
-        name = "tterrag"
-        url = "https://maven.tterrag.com/"
-    }
         maven {
             url "file://${project.projectDir}/repo"
         }
@@ -213,6 +209,9 @@ idea {
         downloadJavadoc = true
     }
 }
+
+
+
 
 
 
