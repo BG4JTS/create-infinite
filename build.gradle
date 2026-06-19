@@ -31,7 +31,6 @@ repositories {
     flatDir {
         dirs 'libs'
     }
-repositories {
     maven {
         name = "Create"
         url = "https://maven.createmod.net"
@@ -209,6 +208,7 @@ idea {
         downloadJavadoc = true
     }
 }
+
 
 
 
