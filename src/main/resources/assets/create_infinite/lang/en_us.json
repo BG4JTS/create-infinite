@@ -1,0 +1,13 @@
+{
+  "itemGroup.create_infinite": "Example Mod Tab",
+  "block.create_infinite.example_block": "Example Block",
+  "item.create_infinite.example_item": "Example Item",
+
+  "create_infinite.configuration.title": "Create: Infinite Configs",
+  "create_infinite.configuration.section.create_infinite.common.toml": "Create: Infinite Configs",
+  "create_infinite.configuration.section.create_infinite.common.toml.title": "Create: Infinite Configs",
+  "create_infinite.configuration.items": "Item List",
+  "create_infinite.configuration.logDirtBlock": "Log Dirt Block",
+  "create_infinite.configuration.magicNumberIntroduction": "Magic Number Text",
+  "create_infinite.configuration.magicNumber": "Magic Number"
+}
