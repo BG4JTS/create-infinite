@@ -1,0 +1,6 @@
+{
+  "itemGroup.create_infinite": "机械动力：无限",
+  "block.create_infinite.infinite_motor": "无限马达",
+  "create_infinite.infinite_motor.tooltip": "无限应力",
+  "create_infinite.infinite_motor.tooltip.summary": "在设定转速下提供无限的应力。"
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=down":  { "model": "create_infinite:block/infinite_motor", "x": 90 },
+    "facing=up":    { "model": "create_infinite:block/infinite_motor", "x": 270 },
+    "facing=north": { "model": "create_infinite:block/infinite_motor" },
+    "facing=south": { "model": "create_infinite:block/infinite_motor", "y": 180 },
+    "facing=west":  { "model": "create_infinite:block/infinite_motor", "y": 270 },
+    "facing=east":  { "model": "create_infinite:block/infinite_motor", "y": 90 }
+  }
+}
