@@ -1,19 +1,73 @@
 package cn.bg4jts.createinfinite.content.kinetics.motor;
 
-import com.simibubi.create.content.kinetics.motor.CreativeMotorBlock;
-import net.minecraft.core.BlockPos;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.state.BlockState;
+import com.simibubi.create.AllShapes;
+import com.simibubi.create.content.kinetics.base.DirectionalKineticBlock;
+import com.simibubi.create.foundation.block.IBE;
 import cn.bg4jts.createinfinite.registry.ModBlockEntities;
 
-public class InfiniteMotorBlock extends CreativeMotorBlock {
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.Direction.Axis;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.LevelReader;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.pathfinder.PathComputationType;
+import net.minecraft.world.phys.shapes.CollisionContext;
+import net.minecraft.world.phys.shapes.VoxelShape;
 
-    public InfiniteMotorBlock(Properties properties) {
-        super(properties);
-    }
+public class InfiniteMotorBlock extends DirectionalKineticBlock implements IBE<InfiniteMotorBlockEntity> {
 
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pos, BlockState state) {
-        return ModBlockEntities.INFINITE_MOTOR.get().create(pos, state);
-    }
+	public InfiniteMotorBlock(Properties properties) {
+		super(properties);
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter worldIn, BlockPos pos, CollisionContext context) {
+		return AllShapes.MOTOR_BLOCK.get(state.getValue(FACING));
+	}
+
+	@Override
+	public BlockState getStateForPlacement(BlockPlaceContext context) {
+		Direction preferred = getPreferredFacing(context);
+		if ((context.getPlayer() != null && context.getPlayer()
+			.isShiftKeyDown()) || preferred == null)
+			return super.getStateForPlacement(context);
+		return defaultBlockState().setValue(FACING, preferred);
+	}
+
+	// IRotate:
+
+	@Override
+	public boolean hasShaftTowards(LevelReader world, BlockPos pos, BlockState state, Direction face) {
+		return face == state.getValue(FACING);
+	}
+
+	@Override
+	public Axis getRotationAxis(BlockState state) {
+		return state.getValue(FACING)
+			.getAxis();
+	}
+
+	@Override
+	public boolean hideStressImpact() {
+		return true;
+	}
+
+	@Override
+	protected boolean isPathfindable(BlockState state, PathComputationType pathComputationType) {
+		return false;
+	}
+
+	@Override
+	public Class<InfiniteMotorBlockEntity> getBlockEntityClass() {
+		return InfiniteMotorBlockEntity.class;
+	}
+
+	@Override
+	public BlockEntityType<? extends InfiniteMotorBlockEntity> getBlockEntityType() {
+		return ModBlockEntities.INFINITE_MOTOR.get();
+	}
+
 }
