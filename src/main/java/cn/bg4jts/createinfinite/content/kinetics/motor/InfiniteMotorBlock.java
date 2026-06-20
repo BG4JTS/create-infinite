@@ -41,7 +41,8 @@ public class InfiniteMotorBlock extends DirectionalKineticBlock implements IBE<I
 
 	@Override
 	public boolean hasShaftTowards(LevelReader world, BlockPos pos, BlockState state, Direction face) {
-		return face == state.getValue(FACING);
+		Direction facing = state.getValue(FACING);
+		return face == facing || face == facing.getOpposite();
 	}
 
 	@Override

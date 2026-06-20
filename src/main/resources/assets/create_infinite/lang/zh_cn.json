@@ -2,5 +2,9 @@
   "itemGroup.create_infinite": "机械动力：无限",
   "block.create_infinite.infinite_motor": "无限马达",
   "create_infinite.infinite_motor.tooltip": "无限应力",
-  "create_infinite.infinite_motor.tooltip.summary": "在设定转速下提供无限的应力。"
+  "create_infinite.infinite_motor.tooltip.summary": "前方输出旋转，转速与应力均为无限；后方仅需任意旋转输入即可驱动。",
+  "create_infinite.infinite_motor.tooltip.condition1": "前方：输出无限应力",
+  "create_infinite.infinite_motor.tooltip.behaviour1": "应力输出无限，转速可调节",
+  "create_infinite.infinite_motor.tooltip.condition2": "后方：输入旋转",
+  "create_infinite.infinite_motor.tooltip.behaviour2": "无需应力消耗，任意转速输入即可运转"
 }

@@ -2,5 +2,9 @@
   "itemGroup.create_infinite": "Create: Infinite",
   "block.create_infinite.infinite_motor": "Infinite Motor",
   "create_infinite.infinite_motor.tooltip": "INFINITE STRESS CAPACITY",
-  "create_infinite.infinite_motor.tooltip.summary": "Provides unlimited stress at configured speed."
+  "create_infinite.infinite_motor.tooltip.summary": "Front face outputs infinite stress at configurable speed; back face accepts any rotation input.",
+  "create_infinite.infinite_motor.tooltip.condition1": "Front: Infinite Stress Output",
+  "create_infinite.infinite_motor.tooltip.behaviour1": "Provides unlimited stress at the configured speed.",
+  "create_infinite.infinite_motor.tooltip.condition2": "Back: Rotation Input",
+  "create_infinite.infinite_motor.tooltip.behaviour2": "Accepts rotation input with no stress requirements."
 }
